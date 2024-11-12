@@ -1,0 +1,20 @@
+#contador com while que conta qunantos alunos tem na sala, soma aidade deles e cria a media das idades
+
+contador = 0
+soma = 0
+
+while True:
+    reposta = input("Adicionar outro aluno ao calculo (s/n)? ")
+    if reposta.lower() != 's':
+        break  
+    idade = int(input("Digite a idade do aluno: "))
+    contador += 1
+    soma += idade
+
+if contador > 0: 
+    media_idade = soma / contador
+    print(f"Total de alunos: {contador}")
+    print(f"Soma das idades: {soma}")
+    print(f"Média de idade: {media_idade}")
+else:
+    print("Nenhum aluno adicionado ao cálculo.")
