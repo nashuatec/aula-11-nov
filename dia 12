@@ -23,3 +23,19 @@ while contador < 6:
     print(f"Número sorteado: {numero}")
     time.sleep(1)  # Delay de 1 segundo
     contador += 1
+
+import time
+
+contador = 0
+numeros_sorteados = []
+
+while contador < 6:
+    # Usando o tempo atual para gerar um "número aleatório"
+    numero = int(time.time() * 1000) % 60 + 1  # Baseado no tempo em milissegundos
+    if numero not in numeros_sorteados:  # Evita duplicatas
+        numeros_sorteados.append(numero)
+        contador += 1
+        print(f"Número sorteado: {numero}")
+        time.sleep(1)  # Delay de 1 segundo
+
+print("Números sorteados:", numeros_sorteados)
