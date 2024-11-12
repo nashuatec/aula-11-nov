@@ -1,0 +1,14 @@
+import time
+
+contador = 0
+numeros_sorteados = []
+
+while contador < 6:
+    numero = (contador * 7 + 3) % 60 + 1  # Gera um número entre 1 e 60
+    if numero not in numeros_sorteados:   # Evita duplicados
+        numeros_sorteados.append(numero)
+        contador += 1
+        print(f"Número sorteado: {numero}")
+        time.sleep(1)  # Delay de 1 segundo
+
+print("Números sorteados:", numeros_sorteados)
